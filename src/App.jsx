@@ -3,7 +3,12 @@ import Header from "./components/Header";
 import IconoNuevoGasto from "./img/nuevo-gasto.svg";
 function App() {
   const [presupuesto, setPresupuesto] = useState(0);
-  const [isValidPresupuesto, setIsValidPresupuesto] = useState(0);
+  const [isValidPresupuesto, setIsValidPresupuesto] = useState(false);
+
+  const [modal, setModal] = useState(false);
+  const handleNuevoGasto = () => {
+    setModal(true);
+  };
   return (
     <div>
       <Header
@@ -19,9 +24,12 @@ function App() {
             src={IconoNuevoGasto}
             alt="Icono Nuevo Gasto"
             className="img-fluid"
+            onClick={handleNuevoGasto}
           />
         </div>
       )}
+
+      {modal && <div>Desde modal</div>}
     </div>
   );
 }
