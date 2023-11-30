@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import Mensaje from "./Mensaje";
 const NuevoPresupuesto = ({
@@ -5,7 +6,7 @@ const NuevoPresupuesto = ({
   setPresupuesto,
   setIsValidPresupuesto,
 }) => {
-  const [mensaje, setMensaje] = useState(0);
+  const [mensaje, setMensaje] = useState("");
   const handlePresupuesto = (e) => {
     e.preventDefault();
     if (presupuesto <= 0) {
