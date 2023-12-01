@@ -1,9 +1,11 @@
-import React from "react";
-
-const Gasto = () => {
+const Gasto = ({ gasto }) => {
+  const { categoria, nombre, cantidad } = gasto;
   return (
-    <div>
-      <p>DEsde Gasto</p>
+    <div className="gasto sombra">
+      <div className="descripcion-gasto">
+        <p className="categoria">{categoria}</p>
+        <p className="nombre-gasto">{nombre}</p>
+      </div>
     </div>
   );
 };
