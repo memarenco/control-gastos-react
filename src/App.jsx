@@ -35,14 +35,17 @@ function App() {
       />
 
       {isValidPresupuesto && (
-        <div className="nuevo-gasto">
-          <img
-            src={IconoNuevoGasto}
-            alt="Icono Nuevo Gasto"
-            className="img-fluid"
-            onClick={handleNuevoGasto}
-          />
-        </div>
+        <>
+          <main></main>
+          <div className="nuevo-gasto">
+            <img
+              src={IconoNuevoGasto}
+              alt="Icono Nuevo Gasto"
+              className="img-fluid"
+              onClick={handleNuevoGasto}
+            />
+          </div>
+        </>
       )}
 
       {modal && (
