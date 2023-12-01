@@ -1,9 +1,12 @@
 import React from "react";
-
-const ListadoGastos = () => {
+import Gasto from "./Gasto";
+const ListadoGastos = ({ gastos }) => {
   return (
-    <div>
-      <p>Desde Listado Gastos</p>
+    <div className="listado-gastos contenedor">
+      <h2>{gastos.length ? "Gastos" : "No hay Gastos Aún"}</h2>
+      {gastos.map((gasto) => {
+        <Gasto />;
+      })}
     </div>
   );
 };
